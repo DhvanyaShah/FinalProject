@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Add Librarian</title>
+        <h:outputStylesheet name="/css/bootstrap.min.css"/>  
+    </h:head>
+    <h:body>
+        Welcome to Library Management
+        
+        
+        <h:form id="form" class="form-horizontal">  
+            <div class="form-group">  
+                <div class="col-sm-4"></div>  
+                <div  class="col-sm-4">  
+                    <h2 style="text-align: left">Add Book</h2>  
+                </div>  
+            </div>  
+            <hr/>  
+            <div class="form-group">  
+                <h:outputLabel for="title" class="control-label col-sm-4">Title</h:outputLabel>  
+                <div class="col-sm-4">  
+                    <h:inputText id="title-id" value="#{books.title}" class="form-control"   
+                                 validatorMessage="title is required">  
+                        <f:validateRequired/>  
+                    </h:inputText>  
+                </div>  
+            </div>  
+            <div class="form-group">  
+                <h:outputLabel for="isbn" class="control-label col-sm-4">ISBN Number</h:outputLabel>  
+                <div class="col-sm-4">  
+                    <h:inputText id="isbn-id" value="#{books.isbn}" class="form-control"   
+                                   validatorMessage="ISBN Number name is required">  
+                        <f:validateRequired/>  
+                    </h:inputText>  
+                </div>  
+            </div> 
+            <div class="form-group">  
+                <h:outputLabel for="author" class="control-label col-sm-4">Author</h:outputLabel>  
+                <div class="col-sm-4">  
+                    <h:inputText id="author-id" value="#{books.author}" class="form-control"   
+                                   validatorMessage="Author Name is required">  
+                        <f:validateRequired/>  
+                    </h:inputText>  
+                </div>  
+            </div>
+            <div class="form-group">  
+                <h:outputLabel for="category" class="control-label col-sm-4">Category</h:outputLabel>  
+                <div class="col-sm-4">  
+                    <h:inputText id="category-id" value="#{books.category}" class="form-control"   
+                                   validatorMessage="category is required">  
+                        <f:validateRequired/>  
+                    </h:inputText>  
+                </div>  
+            </div> 
+            <div class="form-group">  
+                <h:outputLabel for="publisher" class="control-label col-sm-4">Publisher</h:outputLabel>  
+                <div class="col-sm-4">  
+                    <h:inputText id="publisher-id" value="#{books.publisher}" class="form-control"   
+                                   validatorMessage="publisher is required">  
+                        <f:validateRequired/>  
+                    </h:inputText>  
+                </div>  
+            </div> 
+            <div class="form-group">  
+                <h:outputLabel for="issued" class="control-label col-sm-4">Issued</h:outputLabel>  
+                <div class="col-sm-4">  
+                    <h:inputText id="issued-id" value="#{books.issued}" class="form-control"   
+                                   validatorMessage="Issued Date is required">  
+                        <f:validateRequired/>  
+                    </h:inputText>  
+                </div>  
+            </div> 
+            <div class="form-group">  
+                <h:outputLabel for="price" class="control-label col-sm-4">Price</h:outputLabel>  
+                <div class="col-sm-4">  
+                    <h:inputText id="price-id" value="#{books.price}" class="form-control"   
+                                   validatorMessage="Price is required">  
+                        <f:validateRequired/>  
+                    </h:inputText>  
+                </div>  
+            </div> 
+            <div class="form-group">  
+                <h:outputLabel for="quantity" class="control-label col-sm-4">Quantity</h:outputLabel>  
+                <div class="col-sm-4">  
+                    <h:inputText id="quantity-id" value="#{books.quantity}" class="form-control"   
+                                   validatorMessage="Password is required">  
+                        <f:validateRequired/>  
+                    </h:inputText>  
+                </div>  
+            </div> 
+
+
+            <div class="form-group">  
+                <h1></h1>
+                <div class="col-sm-4"></div>  
+                <div class="col-sm-4">  
+                    <div class="col-sm-2">  
+                        <h:commandButton value="Save" action="#{books.save()}" class="btn btn-success"   
+                                         style="width: 80px;"></h:commandButton>  
+                    </div>  
+                </div>  
+            </div>  
+        </h:form>  
+
+        
+        <h:form>
+            <h1></h1>
+            <h:commandButton action = "Librarian" value = "Back" style="width: 80px;"/>            
+            <h1></h1>
+            <h:commandButton action = "index" value = "Home" style="width: 80px;"/>
+        </h:form>
+        
+    </h:body>
+</html>
+

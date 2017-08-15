@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Add Librarian</title>
+        <h:outputStylesheet name="/css/bootstrap.min.css"/>  
+    </h:head>
+    <h:body>
+        Welcome to Library Management
+        
+        
+        <h:form id="form" class="form-horizontal">  
+            <div class="form-group">  
+                <div class="col-sm-4"></div>  
+                <div  class="col-sm-4">  
+                    <h2 style="text-align: left">Add Book</h2>  
+                </div>  
+            </div>  
+            <hr/>  
+            <div class="form-group">  
+                <h:outputLabel for="fname" class="control-label col-sm-4">First Name</h:outputLabel>  
+                <div class="col-sm-4">  
+                    <h:inputText id="fname-id" value="#{members.fname}" class="form-control"   
+                                 validatorMessage="First Name is required">  
+                        <f:validateRequired/>  
+                    </h:inputText>  
+                </div>  
+            </div>  
+            <div class="form-group">  
+                <h:outputLabel for="lname" class="control-label col-sm-4">Last Name</h:outputLabel>  
+                <div class="col-sm-4">  
+                    <h:inputText id="lname-id" value="#{members.lname}" class="form-control"   
+                                   validatorMessage="Last Name is required">  
+                        <f:validateRequired/>  
+                    </h:inputText>  
+                </div>  
+            </div> 
+            <div class="form-group">  
+                <h:outputLabel for="membership_start" class="control-label col-sm-4">Membership_start</h:outputLabel>  
+                <div class="col-sm-4">  
+                    <h:inputText id="membership_start-id" value="#{members.membership_start}" class="form-control"   
+                                   validatorMessage="Membership_start is required">  
+                        <f:validateRequired/>  
+                    </h:inputText>  
+                </div>  
+            </div>
+            <div class="form-group">  
+                <h:outputLabel for="membership_end" class="control-label col-sm-4">Membership_end</h:outputLabel>  
+                <div class="col-sm-4">  
+                    <h:inputText id="membership_end-id" value="#{members.membership_end}" class="form-control"   
+                                   validatorMessage="Membership_end is required">  
+                        <f:validateRequired/>  
+                    </h:inputText>  
+                </div>  
+            </div> 
+            <div class="form-group">  
+                <h:outputLabel for="payment" class="control-label col-sm-4">Payment</h:outputLabel>  
+                <div class="col-sm-4">  
+                    <h:inputText id="payment-id" value="#{members.payment}" class="form-control"   
+                                   validatorMessage="payment is required">  
+                        <f:validateRequired/>  
+                    </h:inputText>  
+                </div>  
+            </div> 
+            <div class="form-group">  
+                <h:outputLabel for="phone" class="control-label col-sm-4">Phone Number</h:outputLabel>  
+                <div class="col-sm-4">  
+                    <h:inputText id="phone-id" value="#{members.phone}" class="form-control"   
+                                   validatorMessage="Phone Number is required">  
+                        <f:validateRequired/>  
+                    </h:inputText>  
+                </div>  
+            </div> 
+
+
+            <div class="form-group">  
+                <h1></h1>
+                <div class="col-sm-4"></div>  
+                <div class="col-sm-4">  
+                    <div class="col-sm-2">  
+                        <h:commandButton value="Save" action="#{members.save()}" class="btn btn-success"   
+                                         style="width: 80px;"></h:commandButton>  
+                    </div>  
+                </div>  
+            </div>  
+        </h:form>  
+
+        
+        <h:form>
+            <h1></h1>
+            <h:commandButton action = "Librarian" value = "Back" style="width: 80px;"/>            
+            <h1></h1>
+            <h:commandButton action = "index" value = "Home" style="width: 80px;"/>
+        </h:form>
+        
+    </h:body>
+</html>
+
